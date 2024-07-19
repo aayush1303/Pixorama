@@ -97,7 +97,7 @@ const Gallery = () => {
         <div style={modalStyles.overlay}>
           <div className="relative bg-[#f5f5f5] rounded-lg p-4 max-w-[90%] max-h-[92%]  md:flex-row ">
             <span style={modalStyles.closeButton} onClick={handleCloseModal}>X</span>
-            <div style={modalStyles.imageContainer}>
+            <div className="w-auto max-h-[80vh] flex justify-center items-center overflow-hidden md:h-[75vh]">
               <img src={selectedImage.urls.full} alt={selectedImage.alt_description || 'Unsplash Image'} style={modalStyles.image} />
             </div>
             <div className="flex-1 flex items-start gap-2 text-black">

@@ -40,14 +40,6 @@ const modalStyles = {
       justifyContent: 'center',
       alignItems: 'center',
     },
-    imageContainer:{
-      width: 'auto',
-      height: '80vh',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      overflow: 'hidden',
-    },
     image: {
       width: '100%',
       height: '100%',
