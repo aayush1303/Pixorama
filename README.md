@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a Next.js project featuring an infinite scroll image gallery built with the Unsplash API. The gallery dynamically fetches and displays images in a Masonry layout, loading new images as the user scrolls down. Clicking on an image opens it in a centered popup, showcasing additional details.
 
 ## Getting Started
 
@@ -16,7 +16,7 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `components/index.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 

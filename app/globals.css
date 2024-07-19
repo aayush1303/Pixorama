@@ -24,7 +24,15 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  overflow-x: hidden;
+  margin: 10px;  
 }
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+
 
 @layer utilities {
   .text-balance {
