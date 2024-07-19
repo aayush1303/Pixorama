@@ -104,7 +104,7 @@ const Gallery = () => {
               <img src={selectedImage.user.profile_image.small} alt={selectedImage.user.name} className="rounded-[10px] mt-2 w-[50px] items-start" />
               <div className='mt-2'>
                 <p className='font-bold'>{selectedImage.user.name}</p>
-                <h2>{selectedImage.alt_description}</h2>
+                <h2 className='text-sm md:text-lg' >{selectedImage.alt_description}</h2>
               </div>
             </div>
           </div>
