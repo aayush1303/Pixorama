@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useState } from 'react';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import { fetchImages } from '../utils/unsplash';
@@ -24,6 +24,11 @@ const Gallery = () => {
   const [page, setPage] = useState<number>(1);
   const [loading, setLoading] = useState<boolean>(false);
   const [selectedImage, setSelectedImage] = useState<Image | null>(null);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     const loadImages = async () => {
@@ -47,16 +52,16 @@ const Gallery = () => {
       }
     };
 
-    if (typeof window !== "undefined") {
+    if (isClient) {
       window.addEventListener("scroll", handleScroll);
     }
 
     return () => {
-      if (typeof window !== "undefined") {
+      if (isClient) {
         window.removeEventListener("scroll", handleScroll);
       }
     };
-  }, []);
+  }, [isClient]);
 
   const handleImageClick = (image: Image) => {
     setSelectedImage(image);
@@ -65,6 +70,10 @@ const Gallery = () => {
   const handleCloseModal = () => {
     setSelectedImage(null);
   };
+
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <div>
